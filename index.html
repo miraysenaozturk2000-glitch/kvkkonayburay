@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KİŞİSEL VERİLERİN KORUNMASI SÖZLEŞMESİ ONAY FORMU</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jsPDF kütüphanesi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>KİŞİSEL VERİLERİN KORUNMASI SÖZLEŞMESİ</h1>
+            <h2>ONAY FORMU</h2>
+        </div>
+
+        <!-- Form -->
+        <form id="kvkkForm">
+            <!-- TARAFLAR Section -->
+            <section class="section">
+                <h3 class="section-title">TARAFLAR</h3>
+                
+                <div class="form-group employer-info">
+                    <label class="label-title">İŞVEREN:</label>
+                    <p class="employer-name">BURAY DEMİRYOLU İNŞAAT A.Ş.</p>
+                    <p class="employer-address">Adresi: Ahlatlıbel Mah. 1902. Sok. NO: 43 ÇANKAYA / ANKARA</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName" class="label-title">İŞÇİ - Adı Soyadı:</label>
+                    <input type="text" id="fullName" name="fullName" class="input-field" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="tcNo" class="label-title">T.C. Kimlik No:</label>
+                    <input type="text" id="tcNo" name="tcNo" class="input-field" placeholder="11 haneli" maxlength="11" pattern="[0-9]{11}" required>
+                    <span class="input-hint">11 haneli TC kimlik numarası giriniz</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="label-title">Adresi:</label>
+                    <textarea id="address" name="address" class="input-field textarea-field" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="formDate" class="label-title">Tarih:</label>
+                    <input type="date" id="formDate" name="formDate" class="input-field" required>
+                </div>
+            </section>
+
+            <!-- SÖZLEŞMENİN KONUSU Section -->
+            <section class="section">
+                <h3 class="section-title">SÖZLEŞMENİN KONUSU</h3>
+                <div class="content-box">
+                    <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") gereğince kişisel verilerin otomatik veya otomatik olmayan yollarla kaydedilmesi, işlenmesi, tasniflenmesi, açıklanması, aktarılması, anonim hâle getirilmesi ve devredilmesine ilişkin usul ve esasları düzenler.</p>
+                </div>
+            </section>
+
+            <!-- MADDELER Section -->
+            <section class="section">
+                <h3 class="section-title">MADDELER</h3>
+
+                <!-- Madde 1 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 1</h4>
+                        <p class="article-content">…/…/…… tarihinde İŞVEREN'in BURAY DEMİRYOLU İNŞAAT A.Ş. işyerinde çalışmaya başlayan İŞÇİ; SGK, Maliye ve diğer kamu kurum/kuruluşlarınca talep edilen belgelerde yer alan bilgilerin doldurulması amacıyla kimlik kartında yer alan verilerini kendi özgür iradesi ve açık rızasıyla İŞVEREN'e vermiştir.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="1">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 2 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 2</h4>
+                        <p class="article-content">İŞÇİ aşağıdaki kişisel verilerini kanuni amaçlar doğrultusunda kendi özgür iradesi ve açık rızasıyla İŞVEREN'e vermiştir:</p>
+                        <ul class="article-list">
+                            <li>Özgeçmiş (CV)</li>
+                            <li>T.C. kimlik numarası</li>
+                            <li>Cep telefonu numarası</li>
+                            <li>E-posta adresi</li>
+                            <li>Adres bilgileri</li>
+                            <li>Aile bilgileri</li>
+                            <li>Eğitim durumu</li>
+                            <li>Sabıka kaydı</li>
+                            <li>Banka hesap numaraları</li>
+                            <li>Sosyal güvenlik bilgileri</li>
+                            <li>Ehliyet bilgileri</li>
+                            <li>Fotoğraf</li>
+                            <li>Engellilik/rapor/icra/nafaka vb. durumlar</li>
+                            <li>COVID-19 verileri</li>
+                            <li>PCR test sonuçları</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="2">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 3 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 3</h4>
+                        <p class="article-content">İŞÇİ, işin gerekleri kapsamında kamu kurum ve kuruluşlarınca şimdi veya ileride talep edilebilecek diğer özel bilgileri de kendi özgür iradesi ve açık rızasıyla İŞVEREN'e sağlayacaktır. Verilerin doğruluğu ve güncelliğinden İŞÇİ sorumludur.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="3">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 4 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 4</h4>
+                        <p class="article-content">İŞÇİ, kişisel verilerinde sonradan meydana gelecek değişiklikleri kendi özgür iradesi ve açık rızasıyla İŞVEREN'e bildirecektir. Verilerin doğruluğu ve güncelliğinden İŞÇİ sorumludur.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="4">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 5 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 5</h4>
+                        <p class="article-content">İŞVEREN, İŞÇİ'ye ait özel nitelikli kişisel verileri (ırk, etnik köken, siyasi düşünce, felsefi inanç, din/mezhep veya diğer inançlar, kılık-kıyafet, dernek/vakıf/sendika üyeliği, sağlık, cinsel hayat, sabıka kaydı, güvenlik tedbirleri, biyometrik ve genetik veriler vb.) üçüncü kişilerle paylaşmayacaktır. Bu veriler ancak İŞÇİ'nin açık rızası alınmak suretiyle, otomatik veya otomatik olmayan yollarla işlenebilir.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="5">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 6 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 6</h4>
+                        <p class="article-content">İŞVEREN, işbu sözleşmede sayılan kişisel verileri yalnızca aşağıdaki kişi ve kurumlarla paylaşabilir/işleyebilir:</p>
+                        <ul class="article-list">
+                            <li>Veri Sorumlusu</li>
+                            <li>SGK yetkilileri</li>
+                            <li>Maliye yetkilileri</li>
+                            <li>T.C. Aile, Çalışma ve Sosyal Hizmetler Bakanlığı yetkilileri</li>
+                            <li>T.C. Hazine ve Maliye Bakanlığı yetkilileri</li>
+                            <li>TÜİK yetkilileri</li>
+                            <li>Kamu kurum ve kuruluşları yetkilileri</li>
+                            <li>Teknokent firması yetkilileri</li>
+                            <li>BES (Bireysel Emeklilik) firmaları</li>
+                            <li>İŞVEREN'in insan kaynakları yetkilileri</li>
+                            <li>İŞVEREN'in muhasebe işlerine bakan meslek mensupları</li>
+                        </ul>
+                        <p class="article-content">Bunların dışındaki üçüncü kişilere verilmeyecek ve işlenmeyecektir.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="6">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 7 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 7</h4>
+                        <p class="article-content">İŞVEREN; İŞÇİ'ye ait verileri şu ortamlarda bulundurabilir, depolayabilir ve işleyebilir:</p>
+                        <ul class="article-list">
+                            <li>Kağıt ortamı</li>
+                            <li>Elektronik ortam</li>
+                            <li>Elektronik araçlar (hard disk, flash bellek, CD, DVD vb.)</li>
+                            <li>Sanal ortamlar (internet, bulut sistemleri)</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="7">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 8 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 8</h4>
+                        <p class="article-content">İŞVEREN; İŞÇİ'ye ait verilerin güvenli ortamlarda saklanması için idari, teknik ve hukuki önlemleri alacaktır. Verilerin üçüncü kişilerce ele geçirilmesinden de sorumludur. İŞÇİ'ye ait kişisel veriler hukuka uygun ve meşru amaçlar doğrultusunda işlenecek; İŞÇİ'nin aleyhine haksızlığa yol açacak şekilde kullanılmayacaktır.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="8">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 9 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 9</h4>
+                        <p class="article-content">İŞÇİ'ye ait tüm veriler, ilgili mevzuatta öngörülen saklama süreleri dolduktan sonra İŞVEREN tarafından kağıt, elektronik ve sanal ortamlardan geri döndürülemeyecek şekilde silinecek/yok edilecektir.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="9">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 10 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 10</h4>
+                        <p class="article-content">İŞÇİ, işbu sözleşmede yazılı tüm maddelerin okunduğunu, anlaşıldığını ve kendisine bilgilendirme yapıldığını kabul eder. Kişisel verilerinin otomatik/otomatik olmayan yollarla kaydedilmesine, işlenmesine, tasniflenmesine, açıklanmasına, aktarılmasına, anonimleştirilmesine ve devredilmesine özgür iradesiyle ve açık rızasıyla onay verir.</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="10">ONAYLIYORUM</button>
+                </div>
+
+                <!-- Madde 11 -->
+                <div class="article-container">
+                    <div class="article">
+                        <h4 class="article-title">Madde 11</h4>
+                        <p class="article-content">İşbu sözleşme …../…../…… tarihinde imza altına alınmış olup 11 (on bir) maddeden oluşmaktadır.</p>
+                        <p class="article-content" style="margin-top: 20px; font-weight: 500;">"İşbu sözleşmede geçen kişisel verilerimi, işlenmek üzere kendi özgür irademle ve açık rızamla verdiğimi kabul ederim."</p>
+                    </div>
+                    <button type="button" class="approve-btn" data-article="11">ONAYLIYORUM</button>
+                </div>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="section summary-section">
+                <h3 class="section-title">ONAY ÖZETİ</h3>
+                <div class="summary-box">
+                    <p id="summaryText">Lütfen tüm maddeleri okuyup onaylayınız.</p>
+                    <div class="approval-status">
+                        <span id="approvalCount">0</span> / 11 madde onaylandı
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <div class="button-group">
+                <button type="button" id="downloadBtn" class="btn btn-primary" disabled>
+                    <span class="btn-icon">📥</span> PDF İNDİR
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                    <span class="btn-icon">🔄</span> FORMU SIFIRLA
+                </button>
+            </div>
+        </form>
+
+        <!-- Hidden PDF Content -->
+        <div id="pdfContent" style="display: none;"></div>
+    </div>
+
+    <script src="animations.js"></script>
+</body>
+</html>
+
